@@ -1,15 +1,25 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
+  "name": "@sugreem_nishad_npm/apnagit",
+  "version": "1.0.15",
+  "description": "A lightweight Git-like Version Control CLI tool and GitHub Clone backend API",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "start": "node index.js"
+  "bin": {
+    "apnagit": "./index.js"
   },
-  "keywords": [],
+  "scripts": {
+    "start": "node index.js start"
+  },
+  "keywords": [
+    "git",
+    "version-control",
+    "vcs",
+    "cli",
+    "aws-s3",
+    "github-clone"
+  ],
   "author": "",
-  "license": "ISC",
-  "description": "",
+  "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.1693.0",
     "bcryptjs": "^3.0.3",
@@ -21,6 +31,7 @@
     "jsonwebtoken": "^9.0.3",
     "mongodb": "^7.1.0",
     "mongoose": "^9.2.2",
+    "nodemailer": "^10.0.15",
     "socket.io": "^4.8.3",
     "uuid": "^13.0.0",
     "yargs": "^17.7.2"

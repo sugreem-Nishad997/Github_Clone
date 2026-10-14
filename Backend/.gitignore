@@ -1,2 +1,4 @@
 node_modules
 .env
+.npmignore
+test-r2.js

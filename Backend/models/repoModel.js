@@ -4,7 +4,6 @@ import { Schema } from "mongoose";
 const RepositorySchema = new Schema({
   name: {
     type: String,
-    unique: true,
     required: true,
   },
   description: {
@@ -27,6 +26,31 @@ const RepositorySchema = new Schema({
     {
       type: Schema.Types.ObjectId,
       ref: "Issue",
+    },
+  ],
+  commits: [
+    {
+      commitID: {
+        type: String,
+        required: true,
+      },
+      message: {
+        type: String,
+        required: true,
+      },
+      author: {
+        type: String,
+        default: "User",
+      },
+      date: {
+        type: Date,
+        default: Date.now,
+      },
+      files: [
+        {
+          type: String,
+        },
+      ],
     },
   ],
 });
